@@ -1,6 +1,6 @@
 cd evaluation/LongBench
 
-model="longchat-v1.5-7b-32k"
+model="/mnt/R1-Distill-llama-8B"
 
 for task in "qasper" "narrativeqa" "hotpotqa" "multifieldqa_en" "gov_report" "triviaqa"
 do
