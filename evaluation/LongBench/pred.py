@@ -35,6 +35,7 @@ def parse_args(args=None):
             "vicuna-v1.5-7b-16k",
             "Mistral-7B-Instruct-v0.3",
             "Meta-Llama-3.1-8B-Instruct",
+            "/mnt/R1-Distill-llama-8B"
         ],
     )
     parser.add_argument("--e", action="store_true", help="Evaluate on LongBench-E")
