@@ -1,7 +1,7 @@
 cd evaluation/passkey
 
-MODEL=Llama-3.1-8B-Instruct
-MODELPATH=meta-llama/Llama-3.1-8B-Instruct
+MODEL=R1-disdilled-llama
+MODELPATH=/mnt/R1-Distill-llama-8B
 OUTPUT_DIR=results/$MODEL
 
 mkdir -p $OUTPUT_DIR
