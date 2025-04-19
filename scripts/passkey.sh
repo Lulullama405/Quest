@@ -6,7 +6,7 @@ OUTPUT_DIR=results/$MODEL
 
 mkdir -p $OUTPUT_DIR
 
-length=100000
+length=10000
 
 for token_budget in 512 1024 2048 4096
 do
