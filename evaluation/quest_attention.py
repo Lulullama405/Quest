@@ -243,7 +243,6 @@ def forward(
 global layer_id
 layer_id = 32
 
-
 def enable_quest_attention_eval(model, args):
     for name, module in reversed(model._modules.items()):
         if len(list(module.children())) > 0:
@@ -258,9 +257,8 @@ def enable_quest_attention_eval(model, args):
             layer_id -= 1
             model._modules[name].layer_id = layer_id
             model._modules[name].flash_forward = model._modules[name].forward
-            model._modules[name].forward = types.MethodType(
+            model._modules[name].forward = types.MethodType( #important
                 forward, model._modules[name]
             )
-
             model._modules[name].token_budget = args.token_budget
             model._modules[name].chunk_size = args.chunk_size

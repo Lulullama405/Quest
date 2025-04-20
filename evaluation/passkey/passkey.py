@@ -130,16 +130,16 @@ def main(args):
     )
 
     if args.fixed_length:
-        args.fixed_length = args.fixed_length * 4
+        args.fixed_length = args.fixed_length
         lengths = [args.fixed_length]
         tokens = [len(tokenizer.encode(generate_prompt(args.fixed_length, 0)[0]))]
         print(f"Prompt is {tokens[0]} tokens")
-    else:
-        if args.tokens_step:
+    else:   #如果没有传入fixed tokens，token数量是一个列表
+        if args.tokens_step:   #step
             tokens = [
                 x for x in range(args.min_tokens, args.max_tokens + 1, args.tokens_step)
             ]
-        else:
+        else: #倍增
             tokens = [args.min_tokens]
             while args.min_tokens < args.max_tokens:
                 point = tokens[-1] * 2
@@ -201,7 +201,6 @@ def main(args):
                 prompt_text, pass_key, answer_first, answer_last = generate_prompt(
                     length, depth_ratio
                 )
-
                 num_tokens = len(pipe.tokenizer.encode(prompt_text))
                 answer = test_model(pipe, prompt_text, pass_key)
                 if answer == pass_key:
