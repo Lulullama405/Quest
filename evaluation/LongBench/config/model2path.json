@@ -9,5 +9,6 @@
     "vicuna-v1.5-7b-16k": "lmsys/vicuna-7b-v1.5-16k", 
     "Mistral-7B-Instruct-v0.3": "mistralai/Mistral-7B-Instruct-v0.3", 
     "Meta-Llama-3.1-8B-Instruct": "meta-llama/Llama-3.1-8B-Instruct",
-    "/mnt/R1-Distill-llama-8B": "/mnt/R1-Distill-llama-8B"
+    "/mnt/R1-Distill-llama-8B": "/mnt/R1-Distill-llama-8B",
+    "/mnt/llama-3.1-8B": "/mnt/llama-3.1-8B"
 }
