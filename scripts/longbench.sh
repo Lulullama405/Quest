@@ -1,6 +1,6 @@
 cd evaluation/LongBench
 
-model="/mnt/R1-Distill-llama-8B"
+model="/mnt/llama-3.1-8B"
 
 #for task in "qasper" "narrativeqa" "hotpotqa" "multifieldqa_en" "gov_report" "triviaqa"
 for task in "hotpotqa"  "multifieldqa_en" #"gov_report"  "triviaqa"
